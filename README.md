@@ -6,4 +6,4 @@ It includes the `function assertHTMLValidate()` which inspects HTML and expects 
 
 ## License
 
-HTMLValidate is released under the MIT Licence. See the bundled LICENSE file for details.
+Assert HTMLValidate is released under the MIT Licence. See the bundled LICENSE file for details.
