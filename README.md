@@ -1,17 +1,15 @@
 # Assert HTMLValidate
 
-HTMLValidate this is extension for [PHPUnit](https://github.com/sebastianbergmann/phpunit) based on [Validator.nu](http://validator.nu).
+Assert HTMLValidate this is extension for [PHPUnit](https://github.com/sebastianbergmann/phpunit) based on [Validator.nu](http://validator.nu).
 It includes the `function assertHTMLValidate()` which inspects HTML and expects true.
 
-## Preset Schemas
+## Preset Schemas (from validator.nu)
 HTML5 (experimental)
-
 * HTML5 (text/html-compatible content models)
 * HTML5+ARIA (experimental)
 * HTML5 with ARIA (unendorsed integration prototype)
 
 Mike(tm) Smith has generated documentation for this schema.
-
 * HTML 4.01 Strict + IRI / XHTML 1.0 Strict + IRI
 * XHTML 1.0 Strict with IRI support. Generally suitable for use HTML 4.01 Strict checking as well, although there are theoretically wrong corner cases. Uses backported HTML5 datatypes.
 * HTML 4.01 Transitional + IRI / XHTML 1.0 Transitional + IRI
@@ -29,7 +27,6 @@ Mike(tm) Smith has generated documentation for this schema.
 * XHTML Basic + IRI
 
 A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser.
-
 * SVG 1.1 + IRI
 * SVG 1.1 Full with IRI support (Inkscape cruft not permitted).
 
