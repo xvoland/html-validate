@@ -31,5 +31,6 @@ A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser
 * SVG 1.1 Full with IRI support (Inkscape cruft not permitted).
 
 ## License
-In the beginning, read [Terms of service](http://validator.nu/#tos)
+In the beginning, read [Terms of service](http://validator.nu/#tos).
+
 Assert HTMLValidate is released under the MIT Licence. See the bundled LICENSE file for details.
