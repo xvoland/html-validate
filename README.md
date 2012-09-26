@@ -1,4 +1,4 @@
 html-validate
 =============
 
-HTMLValidate this is extension for PHPUnit based on [http://validator.nu]Validator.nu
+HTMLValidate this is extension for PHPUnit based on http://validator.nu
