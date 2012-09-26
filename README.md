@@ -3,7 +3,7 @@
 Assert HTMLValidate this is extension for [PHPUnit](https://github.com/sebastianbergmann/phpunit) based on [Validator.nu](http://validator.nu).
 It includes the `function assertHTMLValidate()` which inspects HTML and expects true.
 
-## Preset Schemas (from validator.nu)
+## Preset Schemas (from [validator.nu](http://validator.nu/#presets))
 HTML5 (experimental)
 * HTML5 (text/html-compatible content models)
 * HTML5+ARIA (experimental)
@@ -31,5 +31,5 @@ A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser
 * SVG 1.1 Full with IRI support (Inkscape cruft not permitted).
 
 ## License
-
+In the beginning, read [Terms of service](http://validator.nu/#tos)
 Assert HTMLValidate is released under the MIT Licence. See the bundled LICENSE file for details.
