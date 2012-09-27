@@ -16,7 +16,7 @@ class Assert extends PHPUnit_Framework_Assert
 	{
 		$_url       = 'http://html5.validator.nu/';
 		$_port      = null;
-		$_output    = array('xhtml', 'html', 'xml', 'json', 'gnu', 'text');
+		$_output    = array('xhtml', 'html', 'xml', 'json', 'text');
 		$_useragent = 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)';
 
 
@@ -37,7 +37,7 @@ class Assert extends PHPUnit_Framework_Assert
 		if (!is_string($output) || !in_array($output, $_output))
 		{
 			throw self::factory(
-				2, 'string - text/xhtml/html/xml/json/gnu'
+				2, 'string - text/xhtml/html/xml/json'
 			);
       	}
 
