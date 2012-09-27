@@ -5,20 +5,14 @@ require_once 'PHPUnit/Framework/Assert.php';
 
 class Assert extends PHPUnit_Framework_Assert
 {
-	protected $_url  = 'http://html5.validator.nu/';
-
-	protected $_port = null;
-
-	protected $_output = array('xhtml', 'html', 'xml', 'json', 'gnu', 'text');
-
-	protected $_doctype = '<!DOCTYPE html>'
-						 .'<html>';
-
-	protected $_useragent = 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)';
-
-
 	public static function HTMLValidate($html, $output = 'text')
 	{
+		$_url       = 'http://html5.validator.nu/';
+		$_port      = null;
+		$_output    = array('xhtml', 'html', 'xml', 'json', 'gnu', 'text');
+		$_doctype   =  '<!DOCTYPE html><html>';
+		$_useragent = 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)';
+
 		if (!is_string($html))
 		{
 			throw PHPUnit_Util_InvalidArgumentHelper::factory(1, 'string');
@@ -39,9 +33,9 @@ class Assert extends PHPUnit_Framework_Assert
 		);
 
 		$curlOpt = array(
-			CURLOPT_USERAGENT      => $this->_useragent,
-			CURLOPT_URL            => $this->_url,
-			CURLOPT_PORT           => $this->_port,
+			CURLOPT_USERAGENT      => $_useragent,
+			CURLOPT_URL            => $_url,
+			CURLOPT_PORT           => $_port,
 			//CURLOPT_HTTPHEADER => $headers,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POST           => true,
@@ -65,10 +59,10 @@ class Assert extends PHPUnit_Framework_Assert
 		//$curl_info = curl_getinfo($curl);
 		curl_close($curl);
 
-		if( strpos($message, 'document is valid') === false )
+		if( strpos($response, 'document is valid') === false )
        	{
-        	self::fail($message);
-        	return $message;
+        	self::fail($response);
+        	return $response;
        	}
 
 		return true;
