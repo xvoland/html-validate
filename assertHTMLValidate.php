@@ -78,11 +78,7 @@ class Assert extends PHPUnit_Framework_Assert
 		//$curl_info = curl_getinfo($curl);
 		curl_close($curl);
 
-		if(strpos($response, array(
-					'Error',
-					'error',
-					'Warning',
-					'warning')))
+		if(stripos($response, 'Error') or stripos($response, 'Warning'))
 		{
 	        	self::fail($response);
        	}
