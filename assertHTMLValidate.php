@@ -42,8 +42,8 @@ class Assert extends PHPUnit_Framework_Assert
 			CURLOPT_USERAGENT      => $this->_useragent,
 			CURLOPT_URL            => $this->_url,
 			CURLOPT_PORT           => $this->_port,
-			CURLOPT_RETURNTRANSFER => true,
 			//CURLOPT_HTTPHEADER => $headers,
+			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POST           => true,
 			CURLOPT_POSTFIELDS     => $posts
 		);
@@ -57,7 +57,7 @@ class Assert extends PHPUnit_Framework_Assert
 		{
 			throw new PHPUnit_Framework_Exception(
             	sprintf('Can\'t check validation. cURL returning error %s',
-            		trigger_error( curl_error($curl) )
+            		trigger_error(curl_error($curl))
              	)
             );
 		}
@@ -65,6 +65,12 @@ class Assert extends PHPUnit_Framework_Assert
 		//$curl_info = curl_getinfo($curl);
 		curl_close($curl);
 
-		return $response; //self::fail('ky-ky');
+		if( strpos($message, 'document is valid') === false )
+       	{
+        	self::fail($message);
+        	return $message;
+       	}
+
+		return true;
 	}
 }
