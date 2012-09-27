@@ -78,13 +78,13 @@ class Assert extends PHPUnit_Framework_Assert
 		//$curl_info = curl_getinfo($curl);
 		curl_close($curl);
 
-
-		if(strlen($response) > 100)
+		if(strpos($response, array(
+					'Error',
+					'error',
+					'Warning',
+					'warning')))
 		{
-			if( (strpos($response, 'document is valid') === false) )
-			{
 	        	self::fail($response);
-        	}
        	}
 
    		return true;
