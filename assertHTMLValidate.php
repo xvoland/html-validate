@@ -50,13 +50,11 @@ class Assert extends PHPUnit_Framework_Assert
             self::assertEmpty($html, self::isEmpty());
         }
 
-
         if (!is_string($html)) {
             throw self::factory(
                 1, 'string'
             );
         }
-
 
         if (!is_string($output) || !in_array($output, $_output)) {
             throw self::factory(
@@ -64,12 +62,10 @@ class Assert extends PHPUnit_Framework_Assert
             );
         }
 
-
         $posts = array(
             'out'     => $output,
             'content' => '<!DOCTYPE html><html><head><meta charset=utf-8 /><title></title></head><body>'.$html.'</body></html>'
         );
-
 
         $curlOpt = array(
             CURLOPT_USERAGENT      => $_useragent,
@@ -80,10 +76,8 @@ class Assert extends PHPUnit_Framework_Assert
             CURLOPT_POSTFIELDS     => $posts
         );
 
-
         $curl = curl_init();
         curl_setopt_array($curl, $curlOpt);
-
 
         if (!$response = curl_exec($curl)) {
             throw new PHPUnit_Framework_Exception(
@@ -93,10 +87,10 @@ class Assert extends PHPUnit_Framework_Assert
             );
         }
 
-        //$curl_info = curl_getinfo($curl);
         curl_close($curl);
 
-        if (stripos($response, 'Error') or stripos($response, 'Warning')) {
+        // check response
+        if (stripos($response, 'Error') || stripos($response, 'Warning')) {
                 self::fail($response);
         }
 
