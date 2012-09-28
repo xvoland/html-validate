@@ -46,7 +46,7 @@ class Assert extends PHPUnit_Framework_Assert
         $_useragent = 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)';
 
 
-        if(empty($html)) {
+        if (empty($html)) {
             self::assertEmpty($html, self::isEmpty());
         }
 
@@ -85,7 +85,7 @@ class Assert extends PHPUnit_Framework_Assert
         curl_setopt_array($curl, $curlOpt);
 
 
-        if( ! $response = curl_exec($curl)) {
+        if (!$response = curl_exec($curl)) {
             throw new PHPUnit_Framework_Exception(
                 sprintf('Can\'t check validation. cURL returning error %s',
                     trigger_error(curl_error($curl))
@@ -96,7 +96,7 @@ class Assert extends PHPUnit_Framework_Assert
         //$curl_info = curl_getinfo($curl);
         curl_close($curl);
 
-        if(stripos($response, 'Error') or stripos($response, 'Warning')) {
+        if (stripos($response, 'Error') or stripos($response, 'Warning')) {
                 self::fail($response);
         }
 
