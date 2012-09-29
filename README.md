@@ -39,7 +39,9 @@ A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser
 1. You should already have installed [PHPUnit][phpunit]
 2. Next, you need to copy the file `assertHTMLValidate.php` to the directory `PHPUnit/`
 3. Change the file `PHPUnit/Autoload.php` to load automatically `assertHTMLValidate.php`.
+
 _This should be something like:_
+
 ```
 require_once 'assertHTMLValidate.php';
 ```
