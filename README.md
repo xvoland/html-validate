@@ -39,10 +39,12 @@ A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser
 1. You should already have installed [PHPUnit][phpunit]
 2. Next, you need to copy the file `assertHTMLValidate.php` to the directory `PHPUnit/`
 3. Change the file `PHPUnit/Autoload.php` to load automatically `assertHTMLValidate.php`.
-This should be something like: `require_once 'assertHTMLValidate.php';`
+
+_This should be something like: `require_once 'assertHTMLValidate.php';`_
+
 4. Now, you can use the assertion in your unittests. `Assert::HTMLValidate(<html_code>, ["text/xhtml/html/xml/json"])`
 
-Here are some examples of how this can be in your unittests:
+_Some examples of how this can be in your unittests:_
 
 Assert::HTMLValidate('<span>Hello world</span>')
 
