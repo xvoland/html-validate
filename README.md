@@ -1,9 +1,12 @@
-# Assert HTMLValidate
+# Assert HTMLValidate for PHPUnit
 
-Assert HTMLValidate this is extension for [PHPUnit](https://github.com/sebastianbergmann/phpunit) based on [Validator.nu](http://validator.nu).
+## What is it?
+
+Assert HTMLValidate this is extension for [PHPUnit][phpunit] based on [Validator.nu][validator.nu].
 It includes the `function assertHTMLValidate()` which inspects HTML and expects `true`.
 
-## Preset Schemas (from [validator.nu](http://validator.nu/#presets))
+
+## Preset Schemas (from [validator.nu][validator.nu/presets])
 HTML5 (experimental)
 * HTML5 (text/html-compatible content models)
 * HTML5+ARIA (experimental)
@@ -30,15 +33,28 @@ A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser
 * SVG 1.1 + IRI
 * SVG 1.1 Full with IRI support (Inkscape cruft not permitted).
 
-## What is it?
 
 ## Usage
 
+1. You should already have installed [PHPUnit][phpunit]
+2. Next, you need to copy the file `assertHTMLValidate.php` to the directory `PHPUnit/`
+3. Change the file `PHPUnit/Autoload.php` to load automatically `assertHTMLValidate.php`. (This should be something like `require_once 'assertHTMLValidate.php';`)
+4. Now, you can use the assertion in your unittests. `Assert::HTMLValidate(<html_code>, ["text/xhtml/html/xml/json"])`
+
+Here are some examples of how this can be in your unittests:
+```Assert::HTMLValidate('<span>Hello world</span>')```
+
+```Assert::HTMLValidate($this->render($someDecorator))```
+
 ## License
-In the beginning, read [Terms of service](http://validator.nu/#tos) validator.nu.
+In the beginning, read [Terms of service][validator.nu/tos] validator.nu.
 
 Assert HTMLValidate is released under the MIT Licence. See the bundled `LICENSE` file for details.
 
 ## Author and Sponsorship
 We'd be glad to see most of you at our page http://dotoca.net Probably you'll find here something more interesting
 
+[validator.nu]: http://validator.nu
+[validator.nu/presets]: http://validator.nu/#presets
+[validator.nu/tos]: http://validator.nu/#tos
+[phpunit]: https://github.com/sebastianbergmann/phpunit
