@@ -41,7 +41,7 @@ _This should be something like:_
 ```
 require_once 'assertHTMLValidate.php';
 ```
-* Now, you can use the assertion in your unittests. `Assert::HTMLValidate(<html_code>, ["text/xhtml/html/xml/json"])`
+* Now, you can use the assertion in your unittests `Assert::HTMLValidate(<html_code>, ["text/xhtml/html/xml/json"])`
 
 _Some examples of how this can be in your unittests:_
 
