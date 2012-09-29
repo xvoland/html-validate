@@ -7,12 +7,10 @@ It includes the `function assertHTMLValidate()` which inspects HTML and expects 
 
 
 ## Preset Schemas (from [validator.nu][validator.nu/presets])
-HTML5 (experimental)
+_HTML5 (experimental)_
 * HTML5 (text/html-compatible content models)
 * HTML5+ARIA (experimental)
-* HTML5 with ARIA (unendorsed integration prototype)
-
-Mike(tm) Smith has generated documentation for this schema.
+* HTML5 with ARIA (unendorsed integration prototype) Mike(tm) Smith has generated documentation for this schema.
 * HTML 4.01 Strict + IRI / XHTML 1.0 Strict + IRI
 * XHTML 1.0 Strict with IRI support. Generally suitable for use HTML 4.01 Strict checking as well, although there are theoretically wrong corner cases. Uses backported HTML5 datatypes.
 * HTML 4.01 Transitional + IRI / XHTML 1.0 Transitional + IRI
@@ -27,9 +25,7 @@ Mike(tm) Smith has generated documentation for this schema.
 * XHTML 1.0 (not 1.1), SVG 1.1 and MathML 2.0 with IRI support.
 * XHTML 1.0 Strict, Ruby, SVG 1.1, MathML 2.0 + IRI
 * XHTML 1.0 (not 1.1), Ruby, SVG 1.1 and MathML 2.0 with IRI support.
-* XHTML Basic + IRI
-
-A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser.
+* XHTML Basic + IRI A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser.
 * SVG 1.1 + IRI
 * SVG 1.1 Full with IRI support (Inkscape cruft not permitted).
 
@@ -38,7 +34,7 @@ A schema for XHTML Basic with IRI support. Suitable for use with the HTML parser
 
 * You should already have installed [PHPUnit][phpunit]
 * Next, you need to copy the file `assertHTMLValidate.php` to the directory `PHPUnit/`
-* Change the file `PHPUnit/Autoload.php` to load automatically `assertHTMLValidate.php`.
+* Change the file `PHPUnit/Autoload.php` to load automatically `assertHTMLValidate.php`
 
 _This should be something like:_
 
