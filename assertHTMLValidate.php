@@ -64,7 +64,7 @@ class Assert extends PHPUnit_Framework_Assert
 
         $posts = array(
             'out'     => $output,
-            'content' => '<!DOCTYPE html><html><head><meta charset=utf-8 /><title></title></head><body>'.$html.'</body></html>'
+            'content' => self::_makeHTMLBody($html)
         );
 
         $curlOpt = array(
@@ -90,10 +90,27 @@ class Assert extends PHPUnit_Framework_Assert
         curl_close($curl);
 
         // check response
-        if (stripos($response, 'Error') || stripos($response, 'Warning')) {
+        if (stripos($response, 'Error') !== false || stripos($response, 'Warning') !== false) {
+                //self::assertTrue(false);
                 self::fail($response);
         }
 
-        return true;
+        return self::assertTrue(true);
+    }
+
+
+    /**
+     * this is HTML body?
+     *
+     * @param  string  $html
+     * @return string  $html
+     */
+    private static function _makeHTMLBody($isHTML) {
+        // this is HTML or part of HTML?
+        if (stripos($isHTML, 'html>') === false) {
+            return '<!DOCTYPE html><html><head><meta charset=utf-8 /><title></title></head><body>'.$isHTML.'</body></html>';
+        } else {
+            return $isHTML;
+        }
     }
 }
