@@ -19,7 +19,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @package    Custom Assert
- * @subpackage Custom assert extension for PHPUnit Framework 
+ * @subpackage Custom Assert Extension for PHPUnit Framework
  * @author     Vitalii Tereshchuk <xvoland@dotoca.net>
  * @copyright  2012 Vitalii Tereshchuk <xvoland@dotoca.net>
  * @link       http://dotoca.net/
