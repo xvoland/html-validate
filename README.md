@@ -69,7 +69,9 @@ Assert::HTMLValidate($html, 'json');
 
 ## Author and Sponsorship
 We'd be glad to see most of you at our page http://dotoca.net Probably you'll find here something more interesting.
+
 <a href='http://www.pledgie.com/campaigns/18944'><img alt='Click here to lend your support to: assertHTMLValidate for PHPUnit and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/18944.png?skin_name=chrome' border='0' /></a>
+
 Sponsored by the community and http://dotoca.net
 
 
